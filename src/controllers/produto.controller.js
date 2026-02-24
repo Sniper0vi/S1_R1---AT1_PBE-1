@@ -113,16 +113,6 @@ const produtoController = {
             res.status(500).json({ message: "Erro ao atualizar produto" });
         }
     },
-
-    deletarProduto: async (req, res) => {
-        try {
-
-        } catch (error) {
-            console.error(error);
-            res.status(500).json({ message: "Erro ao deletar produto" });
-        }
-    }
-
 };
 
 export default produtoController;

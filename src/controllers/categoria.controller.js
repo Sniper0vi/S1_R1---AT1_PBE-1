@@ -90,28 +90,6 @@ const categoriaController = {
             });
         }
     },
-
-    deletarCategoria: async (req, res) => {
-        try {
-
-            const  {id}  = req.body;
-
-            const deletado = await categoriaModel.deletarCategoria(id);
-
-            if (deletado === 0) {
-                return res.status(404).json({
-                    message: "Categoria não encontrada"
-                });
-            }
-
-        } catch (error) {
-            console.error(error);
-            return res.status(500).json({
-                message: "Erro ao deletar categoria"
-            });
-        }
-    }
-
 };
 
 export default categoriaController;
